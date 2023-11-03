@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chesstrainer</title>
+
+<meta name="viewport"content="width=divice-width,initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 160%;
+    height: 160%;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+body{margin:0;
+padding:0;
+box-sizing:border-box;
+width:210;
+font-family:'poppins',sans-serif;
+}
+section{
+	
+	min-height:40vh;
+	display:flex;
+	justify-content:center;
+}
+	
+
+/*----navbar----*/
+#navbar{position:sticky;
+top:0;
+background-color:#fff;
+font-weight:bold;
+z-index:10;}
+.bold{
+	font-size:20px;
+	font-weight:bold;
+}
+li{padding:5px;}
+
+.nav-link{
+	font-size:15px;
+	font-weight:bold;
+	border:2px solid transparent;
+}
+
+.nav-link:hover{
+	border-bottom:2px solid blue;
+    transition:0.1s;
+	
+}
+/*---home---*/
+span {
+    color: blue;
+    font-weight: bold;
+	font-size:60px;
+    text-shadow: 4px 3px 5px  rgba(0, 0, 0, 0.5); /* Adjust values as needed */
+}
+
+#home img{
+   padding-top:30px;}
+
+p{font-size:18px;
+}
+
+/*---about---*/
+#about img{
+	width:25rem;
+	height:20rem;
+	
+}
+/*services*/
+.card img{transition:1s;}
+
+.inner{
+	overflow:hidden;
+}
+.card img:hover{
+	transform: scale(1.5);
+	transition:1s;
+}
+/*--contact--*/
+form{padding:40px;
+box-shadow:2px 2px 5px rgba(0,0,0,0.2),-1px -1px 5px rgba(0,0,0,0.05);
+border-radius:30px;
+}
+
+
+main {
+  background-color: #fff;
+  background-image: linear-gradient(132deg, #fff 0%, #fff 100%);
+  padding: 64px 0 32px 0;
+  color: #black;
+}
+main .second {
+  margin-top: 30px;
+}
+main h5 {
+  position: relative;
+  font-weight: 500;
+  width: 100%;
+  text-transform: uppercase;
+}
+main h5:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  bottom: -8px;
+  left: 0;
+  background: #fff;
+}
+main ul {
+  padding-top: 12px;
+}
+main .contact:after {
+  width: 100px;
+}
+main .about:after {
+  width: 60px;
+}
+main .features:after {
+  width: 115px;
+}
+main .comparison:after {
+  width: 170px;
+}
+main .help:after {
+  width: 140px;
+}
+main .affiliate:after {
+  width: 150px;
+}
+main .artical:after {
+  width: 110px;
+}
+main .container .row:nth-child(2) i {
+  color: #111;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+main .container .row:nth-child(2) i:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 20px;
+  height: 1px;
+  width: 20px;
+  background: #fff;
+}
+main .container .row:nth-child(2) i:nth-child(2):after {
+  left: 55px;
+}
+main .container .row:nth-child(3) {
+  padding: 28px 0;
+}
+main .container .row:nth-child(3) h3 {
+  font-weight: 800;
+}
+main .container .row:nth-child(3) .list-inline-item:after {
+  content: '';
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 6px;
+  height: 16px;
+  width: 2px;
+  background: #fff;
+}
+main .container .row:nth-child(3) .list-inline-item:nth-last-child(1):after {
+  content: '';
+  background: none;
+}
+ 
+@media only screen and (max-width: 650px) {
+  .first,
+  .second {
+    margin-top: 24px !important;
+  }
+}
+
+
+/* Style the payment form */
+.payment-form {
+    background-color: #fff;
+    padding: -1px;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the "Pay Now" button */
+#payNowButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#payNowButton:hover {
+    background-color: #0056b3;
+}
+
+  </style>
+
+</head>
+<body>
+<div class="container-fluid col-10">
+<nav class="navbar navbar-expand-lg" id="navbar">
+<a class="navbar-brand" href="#"><img src="http://freevector.co/wp-content/uploads/2011/12/32854-knight-chess-piece.png"  width="60" height="60"></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto mb-lg-0">
+<li class="nav-item"><a class="nav-link"href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link"href="#about">About Us</a></li>
+<li class="nav-item"><a class="nav-link"href="#T">Training Program</a></li>
+<li class="nav-item"><a class="nav-link"href="#Best">Beast Online Chess Training</a></li>
+<li class="nav-item"><a class="nav-link"href="#payment">Payment</a></li>
+<li class="nav-item"><a class="nav-link"href="#Testimonials">Testimonials</a></li>
+<li class="nav-item"><a class="nav-link"href="#Contact">Contact Us</a></li>
+
+
+</ul>
+</div>
+</nav>
+
+<!--carousal-->
+<section>
+<div class="row padding-bottom-0">
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="1" class="active"></li>
+    <li data-target="#demo" data-slide-to="0"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner padding-bottom-0">
+    <div class="carousel-item active">
+      <img src="https://chesstrainer.com/wp-content/uploads/2015/12/Header-3.jpg" alt="chess image" width="1500" height="1000">
+    </div>
+    <div class="carousel-item">
+      <img src="https://chesstrainer.com/wp-content/uploads/2015/12/Header-2.jpg" alt="chess image" width="1500" height="1000">
+    </div>
+    <div class="carousel-item">
+      <img src="https://chesstrainer.com/wp-content/uploads/2015/12/Header-1.jpg" alt="chess image" width="1500" height="1000">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+</div>
+</section>
+
+
+
+
+
+<!--Home-->
+<section id="home">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 py-lg-0 py-3 order-sm-2">
+            <img src="https://media.tenor.com/9MW8NdvjEIAAAAAC/tt-chess.gif" class="img-fluid">
+        </div>
+        <div class="col-lg-6 col-md col-12 order-2 pt-0">
+            <h1 class="display-4">Welcome to<br><span>Online MasterMind Chess Coaching</span></h1>
+            <p class="my-lg-2 my-lg-3 my-3">Try a free interactive session with Chess Trainer for 30 minutes to check how it works for you. It’s live real-time coaching by a FIDE Certified Coach. Register now. It’s Free! Register online to receive an email with more info about how it works.</p>
+            <button class="btn btn-primary my-3" id="bookSlotButton">Book Slot</button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for booking a demo class -->
+<div id="demoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Book a Demo Class</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="timing">Preferred Timing:</label>
+            <input type="text" id="timing" name="timing" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    const bookSlotButton = document.getElementById('bookSlotButton');
+    const modal = document.getElementById('demoModal');
+    const bookingForm = document.getElementById('bookingForm');
+
+    bookSlotButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+
+    bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // You can handle the form submission here, e.g., sending the data to a server.
+        // Then close the modal.
+        modal.style.display = 'none';
+    });
+</script>
+
+
+<!--About-->
+
+<section id="about">
+    <div class="row">
+        <div class="col-lg-6 col-md col-12 pt-5">
+            <h6 style="font-size: 50px;">ABOUT US</h6>
+            <h1 class="display-5"><span>Online Chess Coaching</span></h1>
+            <p>Welcome to Online MasterMind Chess Coaching, your ultimate destination for top-notch chess coaching and expertise!</p>
+            <button class="btn btn-primary my-3" id="servicesButton">Services</button>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-12 py-lg-0 py-3">
+            <img src="https://www.premierchesscoaching.com/wp-content/uploads/2016/10/Depositphotos_3857910_original.jpg" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<script>
+    // JavaScript to handle the button click event
+    document.getElementById('servicesButton').addEventListener('click', function() {
+        alert("Our services include:\n1. Personalized Coaching\n2. Online Chess Classes\n3. Tactics and Strategies\n4. Game Analysis\n5. Tournaments and Competitions");
+    });
+</script>
+
+
+
+<!--section-->
+<!--Training-->
+<section id="T">
+  <div class="row">
+    <h1 class="text-center">Online Chess Training Program</h1>
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="inner">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.gXbuzvJeLp1Le8X_y1iSUQHaHa&pid=Api&P=0&h=220" class="card-img-top rounded">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">Beginners</h5>
+          <p class="card-text">Beginners Online Chess Training Program is for those who are new to the game of Chess. In the Beginners Program, the chess lessons are designed to get you started with the game.</p>
+          <button class="btn btn-dark" onclick="showContactInfo('Beginners')">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="inner">
+          <img src="http://freevector.co/wp-content/uploads/2011/12/32854-knight-chess-piece.png" class="card-img-top rounded">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">Intermediate</h5>
+          <p class="card-text">Intermediate chess course is ideal for those who want to improve their strategic and tactical chess skills. Designed for late-beginners to intermediate chess players, you will learn the fundamentals.</p>
+          <button class="btn btn-dark" onclick="showContactInfo('Intermediate')">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+  <div class="card shadow">
+    <div class="inner">
+      <img src="https://cdn.shopify.com/s/files/1/2209/1363/products/2017_Mega_Chess_Need_to_Clip-36_9544d373-a58d-405a-b9a1-9914fc499713_1200x1200.png?v=1535646348" class="card-img-top rounded">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title text-center">Advanced</h5>
+      <p class="card-text">Advanced Online Chess program is suited for those who are planning to participate in National and international tournaments and want to fine-tune their strategies to play like a pro.</p>
+      <button class="btn btn-dark" onclick="showContactInfo('Advanced')">Learn More</button>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+<script>
+function showContactInfo(program) {
+  let contactInfo = '';
+
+  if (program === 'Beginners') {
+    contactInfo = 'Contact Kiruthikaponneswaran for more information: kiruthikaponneswaran410@gmail.com';
+  } else if (program === 'Intermediate') {
+    contactInfo = 'Contact Kiruthikaponneswaran for more information: kiruthikaponneswaran410@gmail.com';
+  } else if (program === 'Advanced') {
+    contactInfo = 'Contact Kiruthikaponneswaran for more information: kiruthikaponneswaran410@gmail.com';
+  }
+
+  alert(contactInfo);
+}
+
+</script>
+
+<!--best-->
+<section id="Best">
+<div class="row">
+<div class="col-lg-6 col-md col-12 order-1 pt-5">
+<h1 class="display-4"><span> Best Chess Training Website</span></h1>
+<p class="my-lg-2 my-lg-3 my-3">We are mainly focused on delivering an academic learning experience to the students. Our mentor is highly recognized and a global trainer for chess. Get to have one on one interactive and creative strategies to achieve milestones in this field.It is the best way to improve under the guidance through lots of practice sessions. Get the highest advantages with the tournament-level strategic consideration learning method. </p>
+</div>
+<div class="col-lg-6 col-md col-12 order-1 pt-5">
+<h1 class="display-4">Get Interactive Chess Lessons Online!<br><span> </span></h1>
+<p class="my-lg-2 my-lg-3 my-3"><i style='font-size:24px' class='fas'>&#xf439;</i>Pros:<br>Guidance from a world-renowned chess expert.
+
+Preview of the course with free access.<br><i style='font-size:24px' class='fas'>&#xf439;</i>cons:<br>Lengthy instruction-based service.
+Single chess instructor.</p>
+
+</div>
+
+</div>
+</section>
+
+<!--payment-->
+<section id="payment">
+  <div  class="row">
+    <div class="col-lg-6 col-md-6 col-12 order-1 pt-3">
+      <h1 class="display-4">Your Order Summary<br><span> Payment for 8 sessions</span></h1>
+      
+    </div>
+    <div class="col-lg-6 col-md col-12 py-lg-0 py-5 order-sm-2"><section id="Payment">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="payment-form">
+                    
+                    <form id="paymentForm">
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
+                                <label for="expDate">Expiration Date</label>
+                                <input type="text" id="expDate" class="form-control" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" class="form-control" placeholder="123" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="payNowButton">Pay Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section></div>
+  </div>
+</section>
+
+
+
+<!--Testimonials-->
+<section id="Testimonials">
+<div class="row">
+<h1 class="text-center">Testimonials</h1>
+<div class="col-md-4">
+<div class="card shadow">
+<div class="inner"><img src="https://tse3.mm.bing.net/th?id=OIP.LJAMx0rmY6C2vTB2V-ynrAHaHa&pid=Api&P=0&h=220" class="card-img-top rounded"></div><div class="card-body"><h5 class="card-title text-center">Regina Fong (Singapore)</h5>
+<p class="card-text"> Online coaching is working well. Dhanesh can gauge students fast and is flexible with the schedule.</p>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="card shadow">
+<div class="inner"><img src="https://tse4.mm.bing.net/th?id=OIP.Qx62uUoRRvH1Kfbo8inq7QHaFk&pid=Api&P=0&h=220" class="card-img-top rounded"></div><div class="card-body"><h5 class="card-title text-center">Viviktesh Agwan (New York)</h5>
+<p class="card-text">coaching has helped me a lot.He has students all over the world.I will continue to seek help from him whenever I need to hone my skills.,It is a sort of fun and my coach  is always full of ideas.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<div class="inner"><img src="https://tse1.mm.bing.net/th?id=OIP.qGCH4pVJKoVJ6a0U1HONRwHaHa&pid=Api&P=0&h=220" class="card-img-top rounded"></div><div class="card-body"><h5 class="card-title text-center">Judge Jones (Houston, Texas)</h5>
+<p class="card-text"> Chess Trainer is able to teach chess on a level that kids understand  their attention</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<main id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="section">
+                    <h2 class="section-title">About Us</h2>
+                    <p>Welcome to our Chess Coaching platform. We are passionate about chess and committed to helping you improve your chess skills. Our mission is to provide top-quality coaching to chess enthusiasts of all levels.</p>
+                    </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="section">
+                    <h2 class="section-title">Our Services</h2>
+                    <ul class="list-unstyled">
+                        <li>Personalized Coaching</li>
+                        <li>Online Chess Classes</li>
+                        <li>Tactics and Strategies</li>
+                        <li>Game Analysis</li>
+                        <li>Tournaments and Competitions</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="section">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p>If you have any questions or need more information, feel free to reach out to us. We're here to assist you.</p>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:kiruthikaponneswaran410@gmail.com" target="_blank">E-mail</a></li>
+<li><a  href="https://github.com/Kiruthikaponneswaran" target="_blank">Github</a></li>
+
+                        <li><a  href="https://www.linkedin.com/in/kiruthika-ponneswaran-72b16422a" target="_blank">Linkedin</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="list-unstyled list-inline social-icons">
+                    <li class="list-inline-item"><i class="fab fa-facebook"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="list-unstyled list-inline footer-links">
+                    <li class="list-inline-item">Privacy Policy</li>
+                    <li class="list-inline-item">Terms of Service</li>
+                    <li class="list-inline-item">&copy; 2023 Chess Coaching. All Rights Reserved.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const paymentForm = document.getElementById("paymentForm");
+
+    paymentForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // In a real application, you would handle payment processing here
+        // For demonstration purposes, we'll display an alert
+        alert("Payment successful!");
+    });
+});
+</script>
+</body>
+</html>
